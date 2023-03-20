@@ -1,46 +1,15 @@
 {
-    const tasks = [
-        {
+    const tasks = [];
 
-        },
-        {
-
-        },
-    ];
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += 
-                <li>
-                    ${task.done ? "style\"text-decoration: line-trought\"" : ""}
-                </li>
-        }
-    }
-    document.querySelector(".js-tasks").innerHTML = htmlString;
-    ;
-
-    const init = () => {
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+        })
         render();
-
-        const form = document.querySelector(".js-form");
-
-        form.addEventListener("submit", (event) => {
-            event.preventDefult();
-
-            const newTaskContent = document.querySelector(".js-newTask").value.trim();
-
-            if (newTaskContent === "") {
-                return;
-            }
-
-            tasks.push({
-                content: newTaskContent
-            });
-            render()
-        });
     };
 
-    init();
+const removeTask = (taskIndex) => {
+    tasks.splice(taskIndex, 1);
+    render();
+};
 
-}
