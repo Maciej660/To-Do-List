@@ -13,3 +13,15 @@ const removeTask = (taskIndex) => {
     render();
 };
 
+const onFormSubmit = (event) =>{
+    event.preventDefault();
+    const newTaskTekst = document.querySelector(".js-newTask")
+    const newTaskContent =newTaskTekst.value.trim();
+
+    if (newTaskContent !== "") {
+        addNewTask(newTaskContent);
+        newTaskTekst.value = '';
+    }
+    newTaskTekst.focus();
+}
+}
