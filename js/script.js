@@ -1,27 +1,33 @@
 {
-    const tasks = [];
+    const tasks = [
+        {
+            content: "nagrać lekcję",
+            done: false,
+        },
+        {
+            content: "zjeść pierogi",
+            done: true,
+        },
+    ];
 
-    const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        })
-        render();
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+                <li>
+                    ${task.content}
+                </li>
+                `;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
     };
 
-const removeTask = (taskIndex) => {
-    tasks.splice(taskIndex, 1);
-    render();
-};
+    const init = () => {
+        render();
 
-const onFormSubmit = (event) =>{
-    event.preventDefault();
-    const newTaskTekst = document.querySelector(".js-newTask")
-    const newTaskContent =newTaskTekst.value.trim();
+    };
 
-    if (newTaskContent !== "") {
-        addNewTask(newTaskContent);
-        newTaskTekst.value = '';
-    }
-    newTaskTekst.focus();
-}
+    init();
 }
