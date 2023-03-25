@@ -11,28 +11,14 @@
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
         render();
-    }
+    };
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
-    }
+    };
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
-            ${task.content}
-            <button class="js-done form__buttonDone form__buttonDone--click">✔</button>
-            <button class="js-remove form__buttonRemove">🗑</button>
-                </li>
-                `;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-
+    const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -48,7 +34,24 @@
                 toggleTaskDone(index);
             });
         });
+    };
 
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li${task.done ? " style=\"text-decoration: line-through\"" : ""}>
+            ${task.content}
+            <button class="js-done form__buttonDone form__buttonDone--click">✔</button>
+            <button class="js-remove form__buttonRemove">🗑</button>
+                </li>
+                `;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+        bindEvents();
     };
 
 
@@ -63,7 +66,7 @@
         }
 
         addNewTask(newTaskContent);
-    }
+    };
 
     const init = () => {
         render();
