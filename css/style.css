@@ -1,0 +1,14 @@
+html { 
+    box-sizing: border-box;
+}   
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    background: #eee;
+    max-width: 900px;
+    padding: 15px;
+    margin: 0 auto;
+}
