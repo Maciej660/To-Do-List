@@ -1,0 +1,52 @@
+.form {
+    display: flex;
+    grid-gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    ;
+}
+
+.form_newTask {
+    border: solid 2px #607D8B;
+    height: 35px;
+}
+
+.form_button {
+    background-color: teal;
+    color: white;
+    border-radius: 8px;
+}
+
+.form_button:hover {
+    background: rgba(0, 128, 128, 0.952);
+}
+
+.form__buttonDone {
+    background: green;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+.form__buttonDone:hover {
+    border: solid 0px white font-weight: bold;
+    cursor: pointer;
+}
+
+.form__buttonRemove {
+    background: red;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+.form__buttonRemove:hover {
+    border: solid 0px white font-weight: bold;
+    cursor: pointer;

@@ -2,11 +2,13 @@
     margin: 3px 0;
     background: white;
 }
+
 .section__header {
     padding: 2px;
     margin: 1px;
-    border-bottom: solid 3px #eee;   
+    border-bottom: solid 3px #eee;
 }
+
 .section_body {
     padding: 9px;
 }
