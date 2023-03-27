@@ -1,6 +1,8 @@
 .form {
-    display: flex;
-    grid-gap: 10px;
+        display: flex;
+        grid-gap: 10px;
+        justify-content: space-between;
+        align-items: center;
 }
 
 @media (max-width: 767px) {
@@ -14,6 +16,7 @@
 .form_newTask {
     border: solid 2px #607D8B;
     height: 35px;
+    width: 100%;
 }
 
 .form_button {
