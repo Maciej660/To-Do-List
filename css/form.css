@@ -1,20 +1,18 @@
 .form {
-        display: flex;
-        grid-gap: 10px;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr auto;
+
 }
 
 @media (max-width: 767px) {
     .form {
         grid-template-columns: 1fr;
     }
-
-    ;
 }
 
 .form_newTask {
-    border: solid 2px #607D8B;
+    border: 1px #607D8B;
     height: 35px;
     width: 100%;
 }
@@ -22,7 +20,7 @@
 .form_button {
     background-color: teal;
     color: white;
-    border-radius: 8px;
+    border: none;
 }
 
 .form_button:hover {
