@@ -21,14 +21,16 @@
     background-color: teal;
     color: white;
     border: none;
+    transition: 1s;
 }
 
 .form_button:hover {
     background: rgba(0, 128, 128, 0.952);
+    transform: scale(1.5);
 }
 
 .form__buttonDone {
-    background: green;
+    background: hsl(120, 100%, 25%);
     color: white;
     width: 25px;
     height: 25px;
@@ -36,12 +38,14 @@
 }
 
 .form__buttonDone:hover {
-    border: solid 0px white font-weight: bold;
+    border: solid 0px white;
+     font-weight: bold;
     cursor: pointer;
+    background: hsl(120, 100%, 35%);
 }
 
 .form__buttonRemove {
-    background: red;
+    background: hsl(0, 100%, 50%);
     color: white;
     width: 25px;
     height: 25px;
@@ -49,6 +53,8 @@
 }
 
 .form__buttonRemove:hover {
-    border: solid 0px white font-weight: bold;
+    border: solid 0px white; 
+    font-weight: bold;
     cursor: pointer;
+    background: hsl(0, 100%, 65%); 
 }
