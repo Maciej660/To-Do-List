@@ -1,10 +1,10 @@
-.task {
+.tasks {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.task__item {
+.tasks__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
@@ -13,6 +13,6 @@
     border-bottom: 1px solid #ddd;
 }
 
-.task__decoration {
+.tasks__decoration {
     text-decoration: line-through;
 }
