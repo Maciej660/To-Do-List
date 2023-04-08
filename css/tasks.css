@@ -13,6 +13,44 @@
     border-bottom: 1px solid #ddd;
 }
 
-.tasks__decoration {
+.tasks__item--hidden {
+    display: none;
+}
+
+.tasks__content--done {
     text-decoration: line-through;
+}
+
+.tasks__button {
+    color: #ffffff;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.tasks__button--toggleDone {
+    background-color: hsl(120, 61%, 34%);
+}
+
+.tasks__button--toggleDone:hover {
+    background-color: hsl(120, 61%, 39%);
+}
+
+.tasks__button--toggleDone:active {
+    background-color: hsl(120, 61%, 44%);
+}
+
+.tasks__button--remove {
+    background-color: hsl(348, 61%, 44%);
+}
+
+.tasks__button--remove:hover {
+    background-color: hsl(348, 61%, 52%);
+}
+
+.tasks__button--remove:active {
+    background-color: hsl(348, 61%, 57%);
 }
