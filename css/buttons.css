@@ -1,4 +1,3 @@
-
 .buttons {
     margin: auto 0;
     display: flex;
@@ -19,12 +18,15 @@
         margin: 10px;
     }
 }
+
 .buttons__button:hover {
     color: #4daca6;
 }
+
 .buttons__button:active {
     color: #53d4cb;
 }
+
 .buttons__button:disabled {
     color: #ccc;
     cursor: : not-allowed;

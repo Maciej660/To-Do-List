@@ -80,7 +80,7 @@
                 <button class="tasks__button tasks__button--toggleDone js-toggleDone">
                     ${task.done ? "✓" : ""}
                 </button>
-                <span class="tasks__content${ task.done ? " tasks__content--done" : ""}">
+                <span class="tasks__content${task.done ? " tasks__content--done" : ""}">
                     ${task.content}
                 </span>
                 <button class="tasks__button tasks__button--remove js-remove">
@@ -100,7 +100,7 @@
             return;
         };
 
-        
+
         buttonsElement.innerHTML = `
         <button class="buttons__button js-toggleHideDoneTasks">
             ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
