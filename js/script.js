@@ -87,7 +87,7 @@
                 🗑
                 </button>
             </li >
-    `
+    `;
         const tasksElement = document.querySelector(".js-tasks");
         tasksElement.innerHTML = tasks.map(taskToHTML).join("");
     };
